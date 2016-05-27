@@ -1,8 +1,6 @@
 {
-	"type":"quiz.deeppath",
 	"base":{
 		"question":"What stresses you the most right now?",
-		"type":"mutiple-choice"
 		"answers":{
 			"1":{
 				"action":"function:points.add(2);path.change(1);",
@@ -18,19 +16,25 @@
 			},
 			"4":{
 				"action":"function:points.add(1);path.change(1);",
-				"answer":"Competitions / Tournaments"
+				"answer":"Friends"
+			},
+			"5":{
+				"action":"function:points.add(1);path.change(1);",
+				"answer":"Popularity"
+			},
+			"6":{
+				"action":"function:points.add(1);path.change(1);",
+				"answer":"Parents"
+			},
+			"7":{
+				"action":"function:points.add(1);path.change(1);",
+				"answer":"Siblings"
+			},
+			"8":{
+				"action":"function:points.add(1);path.change(1);",
+				"answer":"Other"
 			}
 		}
 		
-	},
-	"paths":{
-		
-		"1":{
-			"questions":{
-				"1":{
-					"question":""
-				}
-			}
-		}
 	}
 }
