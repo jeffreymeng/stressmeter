@@ -1,0 +1,14 @@
+{
+	"base":{
+		"question":"What stresses you the most right now?",
+		"answers":[
+			
+		],
+		"actions":{
+			1:"path.change = main.path.number(1)",
+			1:"path.change = main.path.number(2)",
+			1:"path.change = main.path.number(3)",
+			1:"path.change = main.path.number(4)"
+		}
+	}
+}
