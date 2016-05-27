@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <style>
+        #main-quiz-holder {
+            margin: 0 auto;
+            position: relative;
+            background: #FCFCFC;
+            border: 1px solid #dedede;
+            box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -o-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -webkit-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -moz-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            border-radius: 2px;
+            position: relative;
+            width: 600px;
+            font-family: "Myriad", "Myriad Pro", "Helvetica", "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+        
+        #main-quiz-holder a {
+            text-decoration: none;
+        }
+        
+        #results-container,
+        #intro-container {
+            width: 500px;
+            text-align: center;
+        }
+        
+        .questionContainer {
+            width: 560px;
+            min-height: 400px;
+            padding: 20px;
+            overflow: auto;
+            margin: auto;
+        }
+        
+        .questionContainer .question,
+        h2.qTitle {
+            margin: 10px 0 20px 0;
+            font-size: 26px;
+            font-weight: normal;
+        }
+        
+        h2.qTitle {
+            font-size: 32px;
+            margin-top: 30px;
+        }
+        
+        .questionContainer ul.answers {
+            margin: 0px;
+            padding: 5px;
+            list-style: none;
+        }
+        
+        .questionContainer ul.answers li {
+            padding: 5px 50px;
+            margin: 12px 0;
+            color: #4c4c4c;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+            background: #f6f6f6;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d4d4d4));
+            background: -webkit-linear-gradient(#f6f6f6, #d4d4d4);
+            background-image: -moz-linear-gradient(top, #f6f6f6, #d4d4d4);
+            background-image: -moz-gradient(top, #f6f6f6, #d4d4d4);
+            border: 1px solid #a1a1a1;
+        }
+        
+        .questionContainer ul.answers li.selected {
+            background: #6fb2e5;
+            box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+        }
+        
+        .questionContainer .prev,
+        .questionContainer .next {
+            height: 19px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+            padding: 5px 10px;
+            color: #4c4c4c;
+            border-radius: 4px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            background: #6fb2e5;
+            box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+            -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+        }
+        
+        .questionContainer .next {
+            background: #77d125;
+            box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
+            -o-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
+            -webkit-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
+            -moz-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
+        }
+        
+        #progressKeeper {
+            width: 553px;
+            margin: 0px 12px;
+            box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -o-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -webkit-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            -moz-box-shadow: 0 1px 5px #D9D9D9, inset 0 10px 20px #F1F1F1;
+            border-radius: 2px;
+            border: 1px solid #dedede;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        
+        #progress {
+            width: 0;
+            height: 20px;
+            color: #4c4c4c;
+            background: #f6f6f6;
+            background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d4d4d4));
+            background: -webkit-linear-gradient(#f6f6f6, #d4d4d4);
+            background-image: -moz-linear-gradient(top, #f6f6f6, #d4d4d4);
+            background-image: -moz-gradient(top, #f6f6f6, #d4d4d4);
+        }
+        
+        #resultKeeper {
+            margin: 10px;
+            text-align: center;
+            overflow: auto;
+        }
+        
+        #notice {
+            position: absolute;
+            bottom: 40px;
+            right: 20px;
+        }
+        
+        .questionContainer .prev {
+            float: left;
+        }
+        
+        .questionContainer .next,
+        .questionContainer.btnShowResult {
+            float: right;
+        }
+        
+        .questionContainer .clear {
+            clear: both;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .btnPrev {
+            padding-left: 24px;
+            background: url(img/back.png) left no-repeat;
+        }
+        
+        .btnNext {
+            padding-right: 24px;
+            background: url(img/forward.png) right no-repeat;
+        }
+        
+        .btnShowResult {
+            padding-left: 24px;
+            background: url(img/confirm.png) left no-repeat;
+        }
+        
+        .btnStart {
+            display: block;
+            margin: 40px auto 0 auto;
+        }
+        
+        .btnContainer {
+            margin: 20px 0 30px 0;
+            padding: 5px;
+        }
+        
+        .resultRow {
+            width: 110px;
+            margin: 10px 25px;
+            float: left;
+        }
+        
+        .correct,
+        .wrong {
+            height: 19px;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+            padding: 5px 15px;
+            color: #4c4c4c;
+            border-radius: 4px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
+        
+        .correct {
+            background: #b2d840;
+            background: -webkit-gradient(linear, left top, left bottom, from(#b2d840), to(#90b61e));
+            background: -webkit-linear-gradient(#b2d840, #90b61e);
+            background-image: -moz-linear-gradient(top, #b2d840, #90b61e);
+            background-image: -moz-gradient(top, #b2d840, #90b61e);
+            border: 1px solid #5d8300;
+        }
+        
+        .wrong {
+            background: #e84545;
+            background: -webkit-gradient(linear, left top, left bottom, from(#e84545), to(#c62323));
+            background: -webkit-linear-gradient(#e84545, #c62323);
+            background-image: -moz-linear-gradient(top, #e84545, #c62323);
+            background-image: -moz-gradient(top, #e84545, #c62323);
+            border: 1px solid #930000;
+            color: #F1F1F1;
+        }
+        
+        .correct span {
+            padding: 0 20px;
+            background: url(img/confirm.png) left no-repeat;
+        }
+        
+        .wrong span {
+            padding: 0 20px;
+            background: url(img/delete.png) left no-repeat;
+        }
+        
+        #answer-key {
+            text-align: center;
+            width: 300px;
+            padding: 15px;
+            margin: 0 auto;
+            clear: both;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-quiz-holder">
+        <div id="intro-container" class="questionContainer">
+            <a class="btnStart" href="#"><img src="img/start.png" /></a>
+        </div>
+        <div class="questionContainer hide">
+            <div class="question">
+                CSS is used to...
+            </div>
+            <ul class="answers">
+                <li>
+                    <label>
+                        <input data-key="a" type="radio">lend structure to the document</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="b" type="radio">mold the presentation of the document</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="c" type="radio">script the interactions on the page</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="d" type="radio">You're crafty! This is a trick question.</label>
+                </li>
+            </ul>
+            <div class="btnContainer">
+                <div class="next">
+                    <a class="btnNext" href="#">Next</a>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="questionContainer hide">
+            <div class="question">
+                The C in CSS stands for?
+            </div>
+            <ul class="answers">
+                <li>
+                    <label>
+                        <input data-key="a" type="radio">Crysis</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="b" type="radio">Crocodile</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="c" type="radio">Consistent</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="d" type="radio">Cascading</label>
+                </li>
+            </ul>
+            <div class="btnContainer">
+                <div class="prev">
+                    <a class="btnPrev" href="#">Prev</a>
+                </div>
+                <div class="next">
+                    <a class="btnNext" href="#">Next</a>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!-- More questions here -->
+        <div class="questionContainer hide">
+            <div class="question">
+                The * selector selects...
+            </div>
+            <ul class="answers">
+                <li>
+                    <label>
+                        <input data-key="a" type="radio">every div element</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="b" type="radio">only paragraphs</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="c" type="radio">only parent elements</label>
+                </li>
+                <li>
+                    <label>
+                        <input data-key="d" type="radio">every element</label>
+                </li>
+            </ul>
+            <div class="btnContainer">
+                <div class="prev">
+                    <a class="btnPrev" href="#">Prev</a>
+                </div>
+                <div class="next">
+                    <a class="btnShowResult" href="#">Finish</a>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="results-container" class="questionContainer hide">
+            <div id="resultKeeper">
+            </div>
+        </div>
+        <div id="progressKeeper">
+            <div id="progress">
+            </div>
+        </div>
+        <div id="notice">
+            Please select an option
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+
+</html>
