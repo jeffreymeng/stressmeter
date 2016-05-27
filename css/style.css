@@ -52,3 +52,6 @@ label .glyphicon {
 .modal-body {
     min-height: 205px
 }
+.hidden {
+    display: none;
+}
