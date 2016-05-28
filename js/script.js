@@ -32,7 +32,7 @@ function changeQuestion(number) {
         $("#qid").html(String(number));
         num = String(number);
     }
-    var numOfAnswers = questions[num].answers.entries;
+    var numOfAnswers = questions[num].answers.entries - 1;
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1);
     }
