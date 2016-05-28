@@ -41,7 +41,9 @@ $("label.btn").on('click', function() {
     var choice = $(this).find('input:radio').val();
     $('#quiz').fadeOut();
     console.log(choice);
-    qNumber += 1;
+    console.log(qNumber);
+    qNumber = qNumber + 1;
+    console.log(qNumber);
     changeQuestion(qNumber);
     
     $('#quiz').show();
