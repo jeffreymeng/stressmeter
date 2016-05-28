@@ -8,6 +8,9 @@ var questions = (function () {
         'dataType': "json",
         'success': function (data) {
             json = data;
+        },
+        'error': function (data) {
+            json = data;
         }
     });
     return json;
