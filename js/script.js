@@ -35,7 +35,7 @@ function changeQuestion(number) {
         addAnswer(num, i);
     }
 }
-var qNumber = 1;
+var qNumber = 0; // 0 is start secren
 
 $("label.btn").on('click', function() {
     var choice = $(this).find('input:radio').val();
