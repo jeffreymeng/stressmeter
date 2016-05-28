@@ -34,6 +34,7 @@
 				"action":"function:points.add(1);path.change(1);",
 				"answer":"Other"
 			}
+			"entries":"8"
 		}
 		
 	}

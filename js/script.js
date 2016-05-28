@@ -30,19 +30,12 @@ function changeQuestion(number) {
         $("#qid").html(String(number));
         num = String(number);
     }
-    var numOfAnswers = questions[num].answers.length;
+    var numOfAnswers = questions[num].answers.entries;
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i);
     }
 }
-var qNumber = 0;
-var loading = $('#loadbar').hide();
-$(document)
-    .ajaxStart(function() {
-        loading.show();
-    }).ajaxStop(function() {
-        loading.hide();
-    });
+var qNumber = 1;
 
 $("label.btn").on('click', function() {
     var choice = $(this).find('input:radio').val();
