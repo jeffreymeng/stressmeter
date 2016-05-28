@@ -2,20 +2,12 @@
 var questions = (function () {
     var json = null;
     $.ajax({
-        'type':'get',
-        'async': false,
-        'global': false,
-        'url': "questions.json",
-        'dataType': "json",
-        'success': function (data) {
-            json = data;
-        },
-        'error': function (data) {
-            json = data;
-        }
+      dataType: "json",
+      url: "questions.json",
+      success: function (data){json = data}
     });
     return json;
-})(); 
+})();
 console.log(questions);
 function addAnswer(num, ansNum) {
     var text = questions[num].answers[ansNum].answer;
