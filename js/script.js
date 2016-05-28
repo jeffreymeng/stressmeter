@@ -20,6 +20,7 @@ function addAnswer(num, ansNum) {
     
 }
 function changeQuestion(number) {
+    $("#quiz").html("");
     var num;
     if (number === 1) {
         num = "base";
