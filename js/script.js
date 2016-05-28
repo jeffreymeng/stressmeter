@@ -2,6 +2,7 @@
 var questions = (function () {
     var json = null;
     $.ajax({
+        'type':'get',
         'async': false,
         'global': false,
         'url': "questions.json",
