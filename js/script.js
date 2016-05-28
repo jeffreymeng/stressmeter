@@ -21,10 +21,13 @@ function addAnswer(num, ansNum) {
 }
 function changeQuestion(number) {
     $("#quiz").html("");
+    
     var num;
     if (number === 1) {
+        $("#qid").removeClass("hidden");
         num = "base";
     } else {
+        $("#qid").html(String(number));
         num = String(number);
     }
     var numOfAnswers = questions[num].answers.length;
