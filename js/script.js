@@ -14,6 +14,8 @@ var questions = (function () {
 })(); 
 console.log(questions);
 function addAnswer(num, ansNum) {
+    console.log(num);
+    console.log(ansNum);
     var text = questions[num].answers[ansNum].answer;
     var template = '<label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="q_answer" value="' + ansNum + '">' + text + '</label>';
     $("#quiz").append(template);
