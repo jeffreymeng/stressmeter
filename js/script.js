@@ -1,6 +1,17 @@
 /* global $ */
-var questions;
-$.getJSON("questions.json", function(data){window.questions = data;});
+var questions = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "questions.json",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
 console.log(questions);
 function changeQuestion(number) {
     
