@@ -22,7 +22,6 @@ function addAnswer(num, ansNum) {
     
 }
 function changeQuestion(number) {
-        $('#quiz').fadeOut();
 
     $("#quiz").html("");
     
@@ -38,7 +37,7 @@ function changeQuestion(number) {
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1);
     }
-    $('#quiz').show();
+    $('#quiz').fadeOut.show();
 }
 var qNumber = 0; // 0 is start secren
 
