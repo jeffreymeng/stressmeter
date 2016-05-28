@@ -37,8 +37,18 @@ function changeQuestion(number) {
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1);
     }
+    
     $('#quiz').fadeOut;
     $("#quiz").show();
+    $("label.btn").click(function() {
+    var choice = $(this).find('input:radio').val();
+    console.log(choice);
+    console.log(qNumber);
+    qNumber = qNumber + 1;
+    console.log(qNumber);
+    changeQuestion(qNumber);
+});
+
 }
 var qNumber = 0; // 0 is start secren
 
