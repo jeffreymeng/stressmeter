@@ -42,15 +42,12 @@ function changeQuestion(number) {
 }
 var qNumber = 0; // 0 is start secren
 
-$("label.btn").on('click', function() {
+$("label.btn").click(function() {
     var choice = $(this).find('input:radio').val();
     console.log(choice);
     console.log(qNumber);
     qNumber = qNumber + 1;
     console.log(qNumber);
     changeQuestion(qNumber);
-    
-
-
 });
 
