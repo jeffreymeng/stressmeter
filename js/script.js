@@ -34,7 +34,7 @@ function changeQuestion(number) {
     }
     var numOfAnswers = questions[num].answers.entries;
     for (var i = 0; i < numOfAnswers; i ++) {
-        addAnswer(num, i - 1);
+        addAnswer(num, i + 1);
     }
 }
 var qNumber = 0; // 0 is start secren
