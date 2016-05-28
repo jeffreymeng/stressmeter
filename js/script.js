@@ -22,6 +22,8 @@ function addAnswer(num, ansNum) {
     
 }
 function changeQuestion(number) {
+        $('#quiz').fadeOut();
+
     $("#quiz").html("");
     
     var num;
@@ -36,19 +38,18 @@ function changeQuestion(number) {
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1);
     }
+    $('#quiz').show();
 }
 var qNumber = 0; // 0 is start secren
 
 $("label.btn").on('click', function() {
     var choice = $(this).find('input:radio').val();
-    $('#quiz').fadeOut();
     console.log(choice);
     console.log(qNumber);
     qNumber = qNumber + 1;
     console.log(qNumber);
     changeQuestion(qNumber);
     
-    $('#quiz').show();
 
 
 });
