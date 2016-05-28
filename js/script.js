@@ -37,7 +37,8 @@ function changeQuestion(number) {
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1);
     }
-    $('#quiz').fadeOut.show();
+    $('#quiz').fadeOut;
+    $("#quiz").show();
 }
 var qNumber = 0; // 0 is start secren
 
