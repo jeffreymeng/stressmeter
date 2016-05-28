@@ -13,10 +13,25 @@ var questions = (function () {
     return json;
 })(); 
 console.log(questions);
-function changeQuestion(number) {
+function addAnswer(num, ansNum) {
+    var text = questions[num].answers[ansNum].answer;
+    var template = '<label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="q_answer" value="' + ansNum + '">' + text + '</label>';
+    $("#quiz").append(template);
     
 }
-var qNumber = 1;
+function changeQuestion(number) {
+    var num;
+    if (number === 1) {
+        num = "base";
+    } else {
+        num = String(number);
+    }
+    var numOfAnswers = questions[num].answers.length;
+    for (var i = 0; i < numOfAnswers; i ++) {
+        addAnswer(num, i);
+    }
+}
+var qNumber = 0;
 var loading = $('#loadbar').hide();
 $(document)
     .ajaxStart(function() {
