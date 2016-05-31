@@ -1,4 +1,5 @@
 /* global $ */
+"use strict";
 var questions = (function () {
     var json = null;
     $.ajax({
