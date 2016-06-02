@@ -17,7 +17,7 @@ var points = 0;
 var path = 0;
 function runActions(actionList) {
     for (var i = 0;i < actionList.length; i ++) {
-        var currentAction = actionList
+        var currentAction = actionList;
     }
 }
 console.log(questions);
@@ -75,15 +75,17 @@ var buttonclick = function() {
     }
     if (num === "base") {
         if (questions.base.answers[choice].action){
-            runActions(questions.base.answers[choice].action)
+            runActions(questions.base.answers[choice].action);
         }
+    } else if (num === 0) {
+        // do nothing
     } else {
         if (questions.paths[path][num].answers[choice].action){
-            runActions(questions.base.answers[choice].action)
+            runActions(questions.base.answers[choice].action);
         }
     }
     console.log(path);
-    console.log(points)
+    console.log(points);
     qNumber = qNumber + 1;
     // console.log(qNumber);
     changeQuestion(qNumber, path);
