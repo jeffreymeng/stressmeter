@@ -77,7 +77,7 @@ var buttonclick = function() {
         if (questions.base.answers[choice].action){
             runActions(questions.base.answers[choice].action);
         }
-    } else if (num === 0) {
+    } else if (num === "0") {
         // do nothing
     } else {
         if (questions.paths[path][num].answers[choice].action){
