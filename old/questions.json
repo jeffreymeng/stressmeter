@@ -3,35 +3,51 @@
 		"question":"What stresses you the most right now?",
 		"answers":{
 			"1":{
-				"action":"points += 2;path = 1;",
+				"action":{
+					"change-path":"1"
+				},
 				"answer":"School Assignments or Projects"
 			},
 			"2":{
-				"action":"points += 2;path = 1;;",
+				"action":{
+					"change-path":"1"
+				},
 				"answer":"Homework"
 			},
 			"3":{
-				"action":"points += 3;path = 1;",
+				"action":{
+					"change-path":"1"
+				},
 				"answer":"Tests"
 			},
 			"4":{
-				"action":"points += 2;path = 2;",
+				"action":{
+					"change-path":"2"
+				},
 				"answer":"Friends"
 			},
 			"5":{
-				"action":"points += 2;path = 2;",
+				"action":{
+					"change-path":"2"
+				},
 				"answer":"Popularity"
 			},
 			"6":{
-				"action":"points += 2;path = 3;",
+				"action":{
+					"change-path":"3"
+				},
 				"answer":"Parents"
 			},
 			"7":{
-				"action":"points += 2;path = 3;",
+				"action":{
+					"change-path":"3"
+				},
 				"answer":"Siblings"
 			},
 			"8":{
-				"action":"points += 1;path = 4;",
+				"action":{
+					"change-path":"4"
+				},
 				"answer":"Other"
 			},
 			"entries":"8"
@@ -43,35 +59,52 @@
 			"question":"When are you working on your homework, projects, or studing for your test?",
 		"answers":{
 			"1":{
-				"action":"points += 2;path = 1;",
+				"action":{
+					"add-points":"2",
+					"add-advice":"It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+				},
 				"answer":"Right after school!"
 			},
 			"2":{
-				"action":"points += 2;path = 1;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"After a short 30 min break!"
 			},
 			"3":{
-				"action":"points += 3;path = 1;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"After a afterschool class"
 			},
 			"4":{
-				"action":"points += 2;path = 2;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"Friends"
 			},
 			"5":{
-				"action":"points += 2;path = 2;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"Popularity"
 			},
 			"6":{
-				"action":"points += 2;path = 3;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"Parents"
 			},
 			"7":{
-				"action":"points += 2;path = 3;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"Siblings"
 			},
 			"8":{
-				"action":"points += 1;path = 4;",
+				"action":{
+					"add-points":""
+				},
 				"answer":"Other"
 			},
 			"entries":"8"
