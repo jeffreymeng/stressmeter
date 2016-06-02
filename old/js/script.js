@@ -58,7 +58,6 @@ function changeQuestion(number, path) {
 }
 var qNumber = 0; // 0 is start secren
 
-$("label.btn").click(buttonclick);
 
 var buttonclick = function() {
     var choice = $(this).find('input:radio').val();
@@ -90,3 +89,4 @@ var buttonclick = function() {
     // console.log(qNumber);
     changeQuestion(qNumber, path);
 };
+$("label.btn").click(buttonclick);
