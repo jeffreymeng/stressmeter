@@ -37,13 +37,13 @@ function addAnswer(num, ansNum, path) {
 function changeQuestion(number, path) {
 
     $("#quiz").html("");
-    
+    $("#qid").html(String(number));
     var num;
     if (number === 1) {
         $("#qid").removeClass("hidden");
         num = "base";
     } else {
-        $("#qid").html(String(number));
+        
         num = String(number);
     }
     var numOfAnswers = questions[num].answers.entries;
