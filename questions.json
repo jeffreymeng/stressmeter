@@ -121,21 +121,59 @@
 					"entries": "8"
 				}
 			},
-			"2":{
-				"question":"How much time do you spend on homework, schoolwork, and studying per week combined?",
-				"answers":{
-					"1":{
-						"action":[
-								{"remove-points":"2"}
-							],
-						"answer":"0-3"
+			"2": {
+				"question": "When are you {{work-type}}?",
+				"answers": {
+					"1": {
+						"action": [
+							{"add-points": "2"},
+							{"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						}],
+						"answer": "Right after school."
 					},
-					"2":{
-						"action":[
-								{"end-quiz":"true"}
-							],
-						"answer":"3 - 5"
-					}
+					"2": {
+						"action": [{
+							"add-advice": "It is good that you take a short break"
+						}],
+						"answer": "After a short 30 min break."
+					},
+					"3": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Afterr a afterschool class"
+					},
+					"4": {
+						"action": [{
+							"subtract-points": "2"
+						}],
+						"answer": "After Sports"
+					},
+					"5": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Popularity"
+					},
+					"6": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Parents"
+					},
+					"7": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Siblings"
+					},
+					"8": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Other"
+					},
+					"entries": "8"
 				}
 			}
 		}
