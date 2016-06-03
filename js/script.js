@@ -18,6 +18,7 @@
     var points = 0;
     var path = 0;
     var advice = "";
+    var quizvars = {};
     function getMainAdviceFromPoints(points, path) {
         // calculate percentage
         var tottal; // tottal points
@@ -87,6 +88,9 @@
             else if (Object.keys(currentAction)[0] === "end-quiz") {
                 endQuiz();
             }
+            else if (Object.keys(currentAction)[0] === "create-var") {
+                quizvars[currentAction["create-var"].name] = currentAction["create-var"].value;
+            }
             else {
                 console.log("unknown action: " + Object.keys(currentAction)[0]);
             }
@@ -129,6 +133,11 @@
         else {
             //console.log(num);
             question = questions.paths[String(path)][num].question;
+        }
+        if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
+            question = question.substring(0, question.indexOf("{{")) + // before variable
+            quizvars[question.substring(question.indexOf("{{"), question.indexOf("}}") + 2)] + // variable name
+            question.substring(question.indexOf("}}") + 2); // after variable
         }
         $("#question").html(question);
         var numOfAnswers;

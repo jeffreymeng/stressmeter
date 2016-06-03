@@ -4,19 +4,22 @@
 		"answers": {
 			"1": {
 				"action": [{
-					"change-path": "1"
+					"change-path": "1",
+					"create-var":{"name":"hw-time","value":"School Assignment or Project"}
 				}],
 				"answer": "School Assignments or Projects"
 			},
 			"2": {
 				"action": [{
-					"change-path": "1"
+					"change-path": "1",
+					"create-var":{"name":"hw-time","value":"Homework"}
 				}],
 				"answer": "Homework"
 			},
 			"3": {
 				"action": [{
-					"change-path": "1"
+					"change-path": "1",
+					"create-var":{"name":"hw-time","value":"Tests"}
 				}],
 				"answer": "Tests"
 			},
@@ -57,20 +60,20 @@
 	"paths": {
 		"1": {
 			"1": {
-				"question": "When are you working on your homework, projects, or studing for your test?",
+				"question": "When are you working on your {{hw-time}} for your test?",
 				"answers": {
 					"1": {
 						"action": [{
 							"add-points": "2",
 							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
 						}],
-						"answer": "Right after school!"
+						"answer": "Right after school."
 					},
 					"2": {
 						"action": [{
-							"add-points": ""
+							"add-advice": "It is good that you take a short break"
 						}],
-						"answer": "After a short 30 min break!"
+						"answer": "After a short 30 min break."
 					},
 					"3": {
 						"action": [{
