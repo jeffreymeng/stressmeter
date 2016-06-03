@@ -4,14 +4,19 @@
 		"answers": {
 			"1": {
 				"action": [{
-					"change-path": "1",
-					"create-var":{"name":"hw-time","value":"School Assignment or Project"}
+					"change-path": "1"
+				
+				},
+				{"create-var":{"name":"hw-time","value":"School Assignment or Project"}
+					
 				}],
 				"answer": "School Assignments or Projects"
 			},
 			"2": {
 				"action": [{
-					"change-path": "1",
+					"change-path": "1"
+					
+				},{
 					"create-var":{"name":"hw-time","value":"Homework"}
 				}],
 				"answer": "Homework"
@@ -19,6 +24,8 @@
 			"3": {
 				"action": [{
 					"change-path": "1",
+					
+				},{
 					"create-var":{"name":"hw-time","value":"Tests"}
 				}],
 				"answer": "Tests"
