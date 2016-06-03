@@ -20,15 +20,15 @@ function runActions(actionList) {
     for (var i = 0;i < actionList.length; i ++) {
         var currentAction = actionList[i]; // returns something like {"add points":"7"}
         console.log(currentAction);
-        console.log(Object.keys(currentAction)[1]);
-        if (Object.keys(currentAction)[1] === "change-path") {
-            path = currentAction[Object.keys(currentAction)[1]];
-        } else if (Object.keys(currentAction)[1] === "add-points") {
-            points += currentAction[Object.keys(currentAction)[1]];
-        } else if (Object.keys(currentAction)[1] === "remove-points") {
-            points -= currentAction[Object.keys(currentAction)[1]];
-        } else if (Object.keys(currentAction)[1] === "add-advice") {
-            advice += currentAction[Object.keys(currentAction)[1]] + "\n";
+        console.log(Object.keys(currentAction)[0]);
+        if (Object.keys(currentAction)[0] === "change-path") {
+            path = currentAction[Object.keys(currentAction)[0]];
+        } else if (Object.keys(currentAction)[0] === "add-points") {
+            points += currentAction[Object.keys(currentAction)[0]];
+        } else if (Object.keys(currentAction)[0] === "remove-points") {
+            points -= currentAction[Object.keys(currentAction)[0]];
+        } else if (Object.keys(currentAction)[0] === "add-advice") {
+            advice += currentAction[Object.keys(currentAction)[0]] + "\n";
         } else {
             console.log("unknown action");
         }
