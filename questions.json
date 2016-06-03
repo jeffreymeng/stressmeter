@@ -70,9 +70,9 @@
 				"question": "When are you {{work-type}}?",
 				"answers": {
 					"1": {
-						"action": [{
-							"add-points": "2",
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						"action": [
+							{"add-points": "2"},
+							{"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
 						}],
 						"answer": "Right after school."
 					},
@@ -86,7 +86,7 @@
 						"action": [{
 							"add-points": ""
 						}],
-						"answer": "After a afterschool class"
+						"answer": "Afterr a afterschool class"
 					},
 					"4": {
 						"action": [{
@@ -125,32 +125,3 @@
 
 	}
 }
-
-				"action": [{
-					"change-path": "1"
-				
-				},
-				{"create-var":{"name":"hw-time","value":"School Assignment or Project"}
-					
-				}],
-				"answer": "School Assignments or Projects"
-			},
-			"2": {
-				"action": [{
-					"change-path": "1"
-					
-				},{
-					"create-var":{"name":"hw-time","value":"Homework"}
-				}],
-				"answer": "Homework"
-			},
-			"3": {
-				"action": [{
-					"change-path": "1"
-					
-				},{
-					"create-var":{"name":"hw-time","value":"Tests"}
-				}],
-				"answer": "Tests"
-			},
-			
