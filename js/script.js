@@ -62,8 +62,10 @@ function changeQuestion(number, path) {
     }
     var numOfAnswers;
     if (num === "base" || num === "0") {
+        
         numOfAnswers= questions[num].answers.entries;
     } else {
+        console.log(num);
         numOfAnswers= questions.paths[String(path)][num].answers.entries;
     }
     
