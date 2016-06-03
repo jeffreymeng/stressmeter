@@ -70,8 +70,8 @@
     function runActions(actionList) {
         for (var i = 0; i < actionList.length; i++) {
             var currentAction = actionList[i]; // returns something like {"add points":"7"}
-            //console.log(currentAction);
-            //console.log(Object.keys(currentAction)[0]);
+            console.log(currentAction);
+            console.log(Object.keys(currentAction)[0]);
             if (Object.keys(currentAction)[0] === "change-path") {
                 path = currentAction[Object.keys(currentAction)[0]];
             }
@@ -88,6 +88,8 @@
                 endQuiz();
             }
             else if (Object.keys(currentAction)[0] === "create-var") {
+                console.log(currentAction["create-var"].name);
+                console.log(currentAction["create-var"].value);
                 quizvars[currentAction["create-var"].name] = currentAction["create-var"].value;
             }
             else {
