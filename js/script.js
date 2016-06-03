@@ -53,7 +53,7 @@ function changeQuestion(number, path) {
     $("#quiz").html("");
     $("#qid").html(String(number));
     var num;
-    if (number === 1) {
+    if (number === 0) {
         $("#qid").removeClass("hidden");
         num = "base";
     } else {
