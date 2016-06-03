@@ -1,114 +1,117 @@
 {
-	"base":{
-		"question":"What stresses you the most right now?",
-		"answers":{
-			"1":{
-				"action":{
-					"change-path":"1"
-				},
-				"answer":"School Assignments or Projects"
+	"base": {
+		"question": "What stresses you the most right now?",
+		"answers": {
+			"1": {
+				"action": [{
+					"change-path": "1"
+				}],
+				"answer": "School Assignments or Projects"
 			},
-			"2":{
-				"action":{
-					"change-path":"1"
-				},
-				"answer":"Homework"
+			"2": {
+				"action": [{
+					"change-path": "1"
+				}],
+				"answer": "Homework"
 			},
-			"3":{
-				"action":{
-					"change-path":"1"
-				},
-				"answer":"Tests"
+			"3": {
+				"action": [{
+					"change-path": "1"
+				}],
+				"answer": "Tests"
 			},
-			"4":{
-				"action":{
-					"change-path":"2"
-				},
-				"answer":"Friends"
+			"4": {
+				"action": {[
+					"change-path": "2"
+				}],
+				"answer": "Friends"
 			},
-			"5":{
-				"action":{
-					"change-path":"2"
-				},
-				"answer":"Popularity"
+			"5": {
+				"action": [{
+					"change-path": "2"
+				}],
+				"answer": "Popularity"
 			},
-			"6":{
-				"action":{
-					"change-path":"3"
-				},
-				"answer":"Parents"
+			"6": {
+				"action": [{
+					"change-path": "3"
+				}],
+				"answer": "Parents"
 			},
-			"7":{
-				"action":{
-					"change-path":"3"
-				},
-				"answer":"Siblings"
+			"7": {
+				"action": [{
+					"change-path": "3"
+				}],
+				"answer": "Siblings"
 			},
-			"8":{
-				"action":{
-					"change-path":"4"
-				},
-				"answer":"Other"
+			"8": {
+				"action": [{
+					"change-path": "4"
+				}],
+				"answer": "Other"
 			},
-			"entries":"8"
+			"entries": "8"
 		}
-		
+
 	},
-	"paths":{
-		"1":{
-			"question":"When are you working on your homework, projects, or studing for your test?",
-		"answers":{
-			"1":{
-				"action":{
-					"add-points":"2",
-					"add-advice":"It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
-				},
-				"answer":"Right after school!"
-			},
-			"2":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"After a short 30 min break!"
-			},
-			"3":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"After a afterschool class"
-			},
-			"4":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"Friends"
-			},
-			"5":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"Popularity"
-			},
-			"6":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"Parents"
-			},
-			"7":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"Siblings"
-			},
-			"8":{
-				"action":{
-					"add-points":""
-				},
-				"answer":"Other"
-			},
-			"entries":"8"
+	"paths": {
+		"1": {
+			"1": {
+				"question": "When are you working on your homework, projects, or studing for your test?",
+				"answers": {
+					"1": {
+						"action": [{
+							"add-points": "2",
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						}],
+						"answer": "Right after school!"
+					},
+					"2": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "After a short 30 min break!"
+					},
+					"3": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "After a afterschool class"
+					},
+					"4": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Friends"
+					},
+					"5": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Popularity"
+					},
+					"6": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Parents"
+					},
+					"7": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Siblings"
+					},
+					"8": {
+						"action": [{
+							"add-points": ""
+						}],
+						"answer": "Other"
+					},
+					"entries": "8"
+				}
+			}
 		}
-		}
+
 	}
 }

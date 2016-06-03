@@ -17,7 +17,8 @@ var points = 0;
 var path = 0;
 function runActions(actionList) {
     for (var i = 0;i < actionList.length; i ++) {
-        var currentAction = actionList;
+        var currentAction = actionList[i]; // returns something like {"add points":"7"}
+        console.log(currentAction);
     }
 }
 console.log(questions);
@@ -46,7 +47,13 @@ function changeQuestion(number, path) {
         
         num = String(number);
     }
-    var numOfAnswers = questions[num].answers.entries;
+    var numOfAnswers;
+    if (num === "base" || num === "0") {
+        numOfAnswers= questions[num].answers.entries;
+    } else {
+        numOfAnswers= questions[path][num].answers.entries;
+    }
+    
     for (var i = 0; i < numOfAnswers; i ++) {
         addAnswer(num, i + 1, String(path));
     }
