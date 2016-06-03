@@ -7,28 +7,28 @@
 					"change-path": "1"
 				
 				},
-				{"create-var":{"name":"work-type","value":"School Assignment or Project"}
+				{"create-var":{"name":"work-type","value":"working on your school assignments or project"}
 					
 				}],
-				"answer": " working on your school assignments or project"
+				"answer": "School Assignments or Projects"
 			},
 			"2": {
 				"action": [{
 					"change-path": "1"
 					
 				},{
-					"create-var":{"name":"work-type","value":"Homework"}
+					"create-var":{"name":"work-type","value":"doing your homework"}
 				}],
-				"answer": "doing your homework"
+				"answer": "Homework"
 			},
 			"3": {
 				"action": [{
 					"change-path": "1"
 					
 				},{
-					"create-var":{"name":"work-type","value":"Tests"}
+					"create-var":{"name":"work-type","value":"studying for your test"}
 				}],
-				"answer": "studying for your test"
+				"answer": "Tests"
 			},
 			"4": {
 				"action": [{
@@ -125,3 +125,32 @@
 
 	}
 }
+
+				"action": [{
+					"change-path": "1"
+				
+				},
+				{"create-var":{"name":"hw-time","value":"School Assignment or Project"}
+					
+				}],
+				"answer": "School Assignments or Projects"
+			},
+			"2": {
+				"action": [{
+					"change-path": "1"
+					
+				},{
+					"create-var":{"name":"hw-time","value":"Homework"}
+				}],
+				"answer": "Homework"
+			},
+			"3": {
+				"action": [{
+					"change-path": "1"
+					
+				},{
+					"create-var":{"name":"hw-time","value":"Tests"}
+				}],
+				"answer": "Tests"
+			},
+			
