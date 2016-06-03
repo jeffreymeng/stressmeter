@@ -23,7 +23,7 @@
 			},
 			"3": {
 				"action": [{
-					"change-path": "1",
+					"change-path": "1"
 					
 				},{
 					"create-var":{"name":"hw-time","value":"Tests"}
