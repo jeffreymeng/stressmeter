@@ -61,8 +61,7 @@ function changeQuestion(number, path) {
         num = String(number);
     }
     var numOfAnswers;
-    if (num === "base" || num === "0") {
-        
+    if (num === "base" || num === "-1") {
         numOfAnswers= questions[num].answers.entries;
     } else {
         console.log(num);
