@@ -136,6 +136,10 @@
             //console.log(num);
             question = questions.paths[String(path)][num].question;
         }
+        if (question === "end-quiz") {
+            endQuiz();
+            break;
+        }
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
             console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
             console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
