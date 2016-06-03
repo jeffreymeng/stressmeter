@@ -1,4 +1,3 @@
-(function() {
     /* global $ */
     "use strict";
     var questions = (function() {
@@ -197,4 +196,3 @@
     };
     $("label.btn").click(buttonclick);
 
-})();
