@@ -29,7 +29,7 @@ function addAnswer(num, ansNum, path) {
     if (num === "base") {
         text = questions[num].answers[ansNum].answer;
     } else {
-        text = questions.paths[path][num].answers[ansNum].answer;   
+        text = questions.paths[String(path)][num].answers[ansNum].answer;   
     }
     var template = '<label class="btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span><input type="radio" name="q_answer" value="' + ansNum + '">' + text + '</label>';
     $("#quiz").append(template);
@@ -51,7 +51,7 @@ function changeQuestion(number, path) {
     if (num === "base" || num === "0") {
         numOfAnswers= questions[num].answers.entries;
     } else {
-        numOfAnswers= questions.paths[path][num].answers.entries;
+        numOfAnswers= questions.paths[String(path)][num].answers.entries;
     }
     
     for (var i = 0; i < numOfAnswers; i ++) {
@@ -86,7 +86,7 @@ var buttonclick = function() {
     } else if (num === "0") {
         // do nothing
     } else {
-        if (questions.paths[path][num].answers[choice].action){
+        if (questions.paths[String(path)][num].answers[choice].action){
             runActions(questions.base.answers[choice].action);
         }
     }
