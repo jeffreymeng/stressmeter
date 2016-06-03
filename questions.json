@@ -122,20 +122,20 @@
 				}
 			},
 			"2": {
-				"question": "When are you {{work-type}}?",
+				"question": "How many hours do you do homework, pojects, and study for tests combined every week.?",
 				"answers": {
 					"1": {
 						"action": [
-							{"add-points": "2"},
-							{"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+							{"end-quiz": "2"},
+							{"add-advice": "You should study a little at least."
 						}],
-						"answer": "Right after school."
+						"answer": "0-3 Hours."
 					},
 					"2": {
 						"action": [{
-							"add-advice": "It is good that you take a short break"
+							"add-advice": "Keep studying for 3-7 hours a week, unless you have a big test comng up, in which it is acceptable to study for up to 11 hours a week, buy a max of 3 hours a day."
 						}],
-						"answer": "After a short 30 min break."
+						"answer": "3-5"
 					},
 					"3": {
 						"action": [{
