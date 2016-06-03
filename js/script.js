@@ -51,7 +51,7 @@ function addAnswer(num, ansNum, path) {
 function changeQuestion(number, path) {
 
     $("#quiz").html("");
-    $("#qid").html(String(number));
+    $("#qid").html(String(number + 1));
     var num;
     if (number === 0) {
         $("#qid").removeClass("hidden");
