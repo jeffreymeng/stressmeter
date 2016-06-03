@@ -120,6 +120,23 @@
 					},
 					"entries": "8"
 				}
+			},
+			{
+				"question":"How much time do you spend on homework, schoolwork, and studying per week combined?",
+				"answers":{
+					"1":{
+						"action":[
+								{"remove-points":"2"}
+							],
+						"answer":"0-3"
+					},
+					"2":{
+						"action":[
+								{"end-quiz":"true"}
+							],
+						"answer":"3 - 5"
+					}
+				}
 			}
 		}
 
