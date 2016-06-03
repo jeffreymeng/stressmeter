@@ -49,9 +49,10 @@ function addAnswer(num, ansNum, path) {
     
 }
 function changeQuestion(number, path) {
-
+    
     $("#quiz").html("");
     $("#qid").html(String(number + 1));
+    
     var num;
     if (number === 0) {
         $("#qid").removeClass("hidden");
@@ -60,6 +61,14 @@ function changeQuestion(number, path) {
         
         num = String(number);
     }
+    var question;
+    if (num === "base" || num === "-1") {
+        question= questions[num].question;
+    } else {
+        console.log(num);
+        question= questions.paths[String(path)][num].question;
+    }
+    $("#question").html(question);
     var numOfAnswers;
     if (num === "base" || num === "-1") {
         numOfAnswers= questions[num].answers.entries;
