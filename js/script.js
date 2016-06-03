@@ -138,7 +138,6 @@
         }
         if (question === "end-quiz") {
             endQuiz();
-            break;
         }
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
             console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
