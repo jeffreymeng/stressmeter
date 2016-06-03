@@ -26,3 +26,6 @@ the basic format is
 }
 }
 ```
+## actions
+a table of actions
+
