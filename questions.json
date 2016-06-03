@@ -21,7 +21,7 @@
 				"answer": "Tests"
 			},
 			"4": {
-				"action": {[
+				"action": [{
 					"change-path": "2"
 				}],
 				"answer": "Friends"
