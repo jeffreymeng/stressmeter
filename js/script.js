@@ -78,7 +78,7 @@ function changeQuestion(number, path) {
     $("label.btn").click(buttonclick);
 
 }
-var qNumber = 0; // 0 is start secren
+var qNumber = -1; // -1 is start secren
 
 
 var buttonclick = function() {
@@ -87,7 +87,7 @@ var buttonclick = function() {
     console.log(qNumber);
     console.log(path);
     var num;
-    if (qNumber === 1) {
+    if (qNumber === 0) {
         $("#qid").removeClass("hidden");
         num = "base";
     } else {
@@ -98,9 +98,10 @@ var buttonclick = function() {
         if (questions.base.answers[choice].action){
             runActions(questions.base.answers[choice].action);
         }
-    } else if (num === "0") {
+    } else if (num === "-1") {
         // do nothing
     } else {
+        
         if (questions.paths[String(path)][num].answers[choice].action){
             runActions(questions.base.answers[choice].action);
         }
