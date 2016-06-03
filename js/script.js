@@ -68,6 +68,7 @@
     }
 
     function runActions(actionList) {
+        console.log(actionList.length);
         for (var i = 0; i < actionList.length; i++) {
             var currentAction = actionList[i]; // returns something like {"add points":"7"}
             console.log(currentAction);
