@@ -7,7 +7,7 @@
 					"change-path": "1"
 				
 				},
-				{"create-var":{"name":"hw-time","value":"School Assignment or Project"}
+				{"create-var":{"name":"work-type","value":"School Assignment or Project"}
 					
 				}],
 				"answer": " working on your school assignments or project"
@@ -17,7 +17,7 @@
 					"change-path": "1"
 					
 				},{
-					"create-var":{"name":"hw-time","value":"Homework"}
+					"create-var":{"name":"work-type","value":"Homework"}
 				}],
 				"answer": "doing your homework"
 			},
@@ -26,7 +26,7 @@
 					"change-path": "1"
 					
 				},{
-					"create-var":{"name":"hw-time","value":"Tests"}
+					"create-var":{"name":"work-type","value":"Tests"}
 				}],
 				"answer": "studying for your test"
 			},
