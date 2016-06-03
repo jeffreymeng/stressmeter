@@ -51,7 +51,7 @@ function changeQuestion(number, path) {
     if (num === "base" || num === "0") {
         numOfAnswers= questions[num].answers.entries;
     } else {
-        numOfAnswers= questions[path][num].answers.entries;
+        numOfAnswers= questions.paths[path][num].answers.entries;
     }
     
     for (var i = 0; i < numOfAnswers; i ++) {
