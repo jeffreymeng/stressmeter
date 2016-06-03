@@ -137,11 +137,10 @@
             question = questions.paths[String(path)][num].question;
         }
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
-            console.log(question.substring(question.indexOf("{{"), question.indexOf("}}") + 2));
-            
-            console.log(quizvars[question.substring(question.indexOf("{{"), question.indexOf("}}") + 2)]);
+            console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
+            console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
             question = question.substring(0, question.indexOf("{{")) + // before variable
-            quizvars[question.substring(question.indexOf("{{"), question.indexOf("}}") + 2)] + // variable name
+            quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))] + // variable name
             question.substring(question.indexOf("}}") + 2); // after variable
         }
         $("#question").html(question);
