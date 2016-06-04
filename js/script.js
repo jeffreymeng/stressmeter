@@ -202,9 +202,10 @@
         }
         else if (num === "-1") {
             // do nothing
+            
         }
         else {
-
+            console.log(questions.base.answers[choice].action + "   :   " + questions.paths[String(path)][num].answers[choice].action)
             if (questions.paths[String(path)][num].answers[choice].action) {
                 runActions(questions.base.answers[choice].action);
             }
