@@ -208,7 +208,8 @@
             
         }
         else {
-            console.log(questions.base.answers[choice].action + "   :   " + questions.paths[String(path)][num].answers[choice].action)
+            console.log(questions.base.answers[choice].action);
+            console.log(questions.paths[String(path)][num].answers[choice].action);
             if (questions.paths[String(path)][num].answers[choice].action) {
                 runActions(questions.base.answers[choice].action);
             }
