@@ -92,11 +92,14 @@
             else if (Object.keys(currentAction)[0] === "add-points") {
                 points += currentAction[Object.keys(currentAction)[0]];
             }
-            else if (Object.keys(currentAction)[0] === "remove-points") {
+            else if (Object.keys(currentAction)[0] === "subtract-points") {
                 points -= currentAction[Object.keys(currentAction)[0]];
             }
             else if (Object.keys(currentAction)[0] === "add-advice") {
+                console.log(currentAction[Object.keys(currentAction)[0]]);
+                console.log(advice);
                 advice = advice + currentAction[Object.keys(currentAction)[0]] + "\n";
+                console.log(advice);
             }
             else if (Object.keys(currentAction)[0] === "end-quiz") {
                 endQuiz();
