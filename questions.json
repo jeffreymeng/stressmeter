@@ -126,7 +126,7 @@
 				"answers": {
 					"1": {
 						"action": [
-							{"end-quiz": "2"},
+							{"end-quiz": "true"},
 							{"add-advice": "You should study a little at least."
 						}],
 						"answer": "0-3 Hours."
