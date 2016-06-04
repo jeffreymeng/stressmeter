@@ -18,52 +18,65 @@
     var path = 0;
     var advice = "";
     var quizvars = {};
+
     function getMainAdviceFromPoints(points, path) {
         // calculate percentage
         var tottal; // tottal points
-        switch(path) {
+        switch (path) {
             case 1:
-                tottal = 20;//TODO: update tottals based on path
+                tottal = 20; //TODO: update tottals based on path
                 break;
             case 2:
-                tottal = 20;//TODO: update tottals based on path
+                tottal = 20; //TODO: update tottals based on path
                 break;
             case 3:
-                tottal = 20;//TODO: update tottals based on path
+                tottal = 20; //TODO: update tottals based on path
                 break;
             case 4:
-                tottal = 20;//TODO: update tottals based on path
+                tottal = 20; //TODO: update tottals based on path
                 break;
         }
+        console.log(tottal);
+        console.log(points);
         var percentage = points / tottal;
         if (percentage > 10) {
+
             // extremly low risk
-        } else if (percentage >= 10 && percentage < 20) {
+        }
+        else if (percentage >= 10 && percentage < 20) {
             // very low risk
-        }  else if (percentage >= 20 && percentage < 30) {
+        }
+        else if (percentage >= 20 && percentage < 30) {
             // low risk
-        }  else if (percentage >= 30 && percentage < 40) {
+        }
+        else if (percentage >= 30 && percentage < 40) {
             // relatively low risk
-        }  else if (percentage >= 40 && percentage < 50) {
+        }
+        else if (percentage >= 40 && percentage < 50) {
             // slightly low  risk
-        }  else if (percentage >= 50 && percentage < 60) {
+        }
+        else if (percentage >= 50 && percentage < 60) {
             // medium risk
-        }  else if (percentage >= 60 && percentage < 70) {
+        }
+        else if (percentage >= 60 && percentage < 70) {
             // slightly high risk
-        }  else if (percentage >= 70 && percentage < 80) {
+        }
+        else if (percentage >= 70 && percentage < 80) {
             // high risk
-        } else if (percentage >= 90) {
+        }
+        else if (percentage >= 90) {
             // very high risk
         }
-        
+
     }
+
     function endQuiz() {
         // end the quiz
         $("#question").html("Thank you for taking this quiz. We hope this helps your stress.");
         $("#quiz").remove();
         $("#advice").html(advice);
-        $("#main").html(getMainAdviceFromPoints(points, path)[0]);
-        $("#main-text").html(getMainAdviceFromPoints(points, path)[0]);
+        $("#main").html(getMainAdviceFromPoints(points, path));
+        $("#main-text").html(getMainAdviceFromPoints(points, path));
         $("#results").removeClass("hidden");
     }
 
@@ -83,7 +96,7 @@
                 points -= currentAction[Object.keys(currentAction)[0]];
             }
             else if (Object.keys(currentAction)[0] === "add-advice") {
-                advice += currentAction[Object.keys(currentAction)[0]] + "\n";
+                advice = advice + currentAction[Object.keys(currentAction)[0]] + "\n";
             }
             else if (Object.keys(currentAction)[0] === "end-quiz") {
                 endQuiz();
@@ -98,10 +111,10 @@
             }
         }
     }
-    //console.log(questions);
+    console.log(questions);
     function addAnswer(num, ansNum, path) {
-        //console.log(num);
-        //console.log(ansNum);
+        console.log(num);
+        console.log(ansNum);
         var text;
         if (num === "base") {
             text = questions[num].answers[ansNum].answer;
@@ -133,7 +146,7 @@
             question = questions[num].question;
         }
         else {
-            //console.log(num);
+            console.log(num);
             question = questions.paths[String(path)][num].question;
         }
         if (question === "end-quiz") {
@@ -143,8 +156,8 @@
             console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
             console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
             question = question.substring(0, question.indexOf("{{")) + // before variable
-            quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))] + // variable name
-            question.substring(question.indexOf("}}") + 2); // after variable
+                quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))] + // variable name
+                question.substring(question.indexOf("}}") + 2); // after variable
         }
         $("#question").html(question);
         var numOfAnswers;
@@ -170,9 +183,9 @@
 
     var buttonclick = function() {
         var choice = $(this).find('input:radio').val();
-        //console.log(choice);
-        //console.log(qNumber);
-        //console.log(path);
+        console.log(choice);
+        console.log(qNumber);
+        console.log(path);
         var num;
         if (qNumber === 0) {
             $("#qid").removeClass("hidden");
@@ -196,11 +209,11 @@
                 runActions(questions.base.answers[choice].action);
             }
         }
-        //console.log(path);
-        //console.log(points);
+        console.log(path);
+        console.log(points);
         qNumber = qNumber + 1;
-        // console.log(qNumber);
+        console.log(qNumber);
         changeQuestion(qNumber, path);
     };
     $("label.btn").click(buttonclick);
-
+    
