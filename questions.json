@@ -39,7 +39,7 @@
 				}],
 				"answer": "Tests"
 			},
-			
+
 			"entries": "3"
 		}
 
@@ -50,7 +50,7 @@
 				"question": "When are you {{work-type}}?",
 				"answers": {
 					"1": {
-						"action": [ {
+						"action": [{
 							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
 						}, {
 							"add-points": "3"
@@ -58,25 +58,25 @@
 						"answer": "Right after school."
 					},
 					"2": {
-						"action": [ {
+						"action": [{
 							"subtract-points": "3"
-						},{
+						}, {
 							"add-advice": "It is good that you take a short break after school. Just make sure it's not too long."
 						}],
 						"answer": "After a short 30 min break."
 					},
 					"3": {
-						"action": [ {
+						"action": [{
 							"add-advice": "You should make sure to take a 30 minute break as soon as you get home from your class."
-						},{
+						}, {
 							"add-points": "5"
 						}],
 						"answer": "After a afterschool class that you dont like."
 					},
 					"4": {
-						"action": [ {
+						"action": [{
 							"add-advice": "Doing sports is a great way to relax."
-						},{
+						}, {
 							"subtract-points": "2"
 						}],
 						"answer": "After Sports"
@@ -97,8 +97,7 @@
 						"answer": "0-3 Hours."
 					},
 					"2": {
-						"action": [
-						{
+						"action": [{
 							"add-advice": "Keep studying for 3-7 hours a week, unless you have a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
 						}],
 						"answer": "3-5 Hours"
@@ -111,7 +110,7 @@
 					},
 					"4": {
 						"action": [{
-							"add-points":"8"
+							"add-points": "8"
 						}, {
 							"add-advice": "You should study a little less(3-7 hours). Remeber that failing one test wont kill your grade unless it is a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
 						}],
@@ -121,7 +120,7 @@
 						"action": [{
 							"add-points": "11"
 						}, {
-							"add advice":"Slow Down! You study way too much. You should be studying for about 3-7 hours"
+							"add advice": "Slow Down! You study way too much. You should be studying for about 3-7 hours"
 						}],
 						"answer": "11+ Hours"
 					},
@@ -132,11 +131,10 @@
 				"question": "How many friends do you have who would call you their friend too?",
 				"answers": {
 					"1": {
-						"action": [
-						{
+						"action": [{
 							"add-points": "5"
 						}, {
-							"add-advice":"Try to make at least one close friend. You should just fine someone who has the same intrests as you, and talk to them. Whats the worst that can happen? And No, the world won't explode. Then think of the best that can happen. You could have a person you can do your intrests with."
+							"add-advice": "Try to make at least one close friend. You should just fine someone who has the same intrests as you, and talk to them. Whats the worst that can happen? And No, the world won't explode. Then think of the best that can happen. You could have a person you can do your intrests with."
 						}],
 						"answer": "None."
 					},
@@ -146,13 +144,13 @@
 						}],
 						"answer": "Just one good friend. We do eveything together"
 					},
-					
+
 					"3": {
 						"answer": "Just a few close friends."
 					},
 					"4": {
 						"action": [{
-							"add-points":"1"
+							"add-points": "1"
 						}, {
 							"add-advice": "If you have a lot of friends, you should try to get a few closer to you. Find some people who share your intrests, and talk to them more."
 						}],
@@ -167,38 +165,39 @@
 					"entries": "5"
 				}
 			},
-			"4":{
-				"question":"How many hours a week do you do sports, games, and other recreational activities?",
-				"answers":{
-					"1":{
-						"action":[
-							{"subtract-points":"1"}
-						],
-						"answer":"0-1 Hours"
+			"4": {
+				"question": "How many hours a week do you do sports, games, and other recreational activities?",
+				"answers": {
+					"1": {
+						"answer": "0-1 Hours",
+						"action": [{
+							"subtract-points": "1"
+						}]
+						
 					},
-					"2":{
-						"action":[
-							{"subtract-points":"3"}	
-						],
-						"answer":"2-4 Hours"
+					"2": {
+						"action": [{
+							"subtract-points": "3"
+						}],
+						"answer": "2-4 Hours"
 					},
-					"3":{
-						"action":[
-							{"subtract-points":"5"}	
-						],
-						"answer":"4-6 Hours"
+					"3": {
+						"action": [{
+							"subtract-points": "5"
+						}],
+						"answer": "4-6 Hours"
 					},
-					"4":{
-						"action":[
-							{"subtract-points":"7"}	
-						],
-						"answer":"6-8 Hours"
+					"4": {
+						"action": [{
+							"subtract-points": "7"
+						}],
+						"answer": "6-8 Hours"
 					},
-					"5":{
-						"action":[
-							{"subtract-points":"9"}	
-						],
-						"answer":"8 + Hours"
+					"5": {
+						"action": [{
+							"subtract-points": "9"
+						}],
+						"answer": "8 + Hours"
 					}
 				}
 			}
