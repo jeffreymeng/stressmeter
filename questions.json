@@ -166,6 +166,48 @@
 				}
 			},
 			"4": {
+				"question": "This is annoying or is it?",
+				"answers": {
+					"1": {
+						"action": [{
+							"add-points": "5"
+						}, {
+							"add-advice": "Try to make at least one close friend. You should just fine someone who has the same intrests as you, and talk to them. Whats the worst that can happen? And No, the world won't explode. Then think of the best that can happen. You could have a person you can do your intrests with."
+						}],
+						"answer": "None."
+					},
+					"2": {
+						"action": [{
+							"add-advice": "Even though you are really close to your friend, you should try to find other friends too. What will you do when your friend gets sick?"
+						}],
+						"answer": "Just one good friend. We do eveything together"
+					},
+
+					"3": {
+						"answer": "Just a few close friends."
+					},
+					"4": {
+						"action": [{
+							"add-points": "1"
+						}, {
+							"add-advice": "If you have a lot of friends, you should try to get a few closer to you. Find some people who share your intrests, and talk to them more."
+						}],
+						"answer": "a ton, but none are really close."
+					},
+					"5": {
+						"action": [{
+							"subtract-points": "4"
+						}],
+						"answer": "A lot, and some are close"
+					},
+					"entries": "5"
+				}
+			}
+		}
+
+	}
+}
+"4": {
 				"question": "How many hours a week do you do sports, games, and other recreational activities?",
 				"answers": {
 					"1": {
@@ -201,7 +243,3 @@
 					}
 				}
 			}
-		}
-
-	}
-}
