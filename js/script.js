@@ -23,13 +23,17 @@
     function endQuiz() {
         var maintext;
         var mainadvice;
-
+        if (points < 20) {
+            maintext = "You are not stressed";
+            mainadvice = "";
+        }
         $("#qid").hide();
         $("#questions").val("Thank you for taking this quiz. We hope this helps your stress.");
         $("#quiz").hide();
         $("#main").html(maintext);
         $("#main-text-advice").html(mainadvice);
         $("#advice").html(advice);
+        $("#results").removeClass("hidden");
     }
 
     function runActions(actionList) {
