@@ -1,4 +1,4 @@
-(function(){
+(function() {
     /* global $ */
     var questions = (function() {
         var json = null;
@@ -15,15 +15,15 @@
     })();
 
     var points = 0,
-    path = 0,
-    advice = "",
-    quizvars = {};
+        path = 0,
+        advice = "",
+        quizvars = {};
 
     // console.log(questions);
     function endQuiz() {
         var maintext;
         var mainadvice;
-        
+
         $("#qid").hide();
         $("#questions").val("Thank you for taking this quiz. We hope this helps your stress.");
         $("#quiz").hide();
@@ -31,12 +31,13 @@
         $("#main-text-advice").html(mainadvice);
         $("#advice").html(advice);
     }
+
     function runActions(actionList) {
         var length = actionList.length;
         // console.log(actionList)
         var actionName;
         var actionValue;
-        for (var i = 0; i < length; i ++) {
+        for (var i = 0; i < length; i++) {
             var action = actionList[i];
             // console.log(action)
             actionName = Object.keys(action)[0];
@@ -45,20 +46,26 @@
             //console.log(actionValue);
             if (actionName === "add-points") {
                 points += parseInt(actionValue, 10);
-            } else if (actionName === "add-advice") {
+            }
+            else if (actionName === "add-advice") {
                 advice = advice + "\n" + actionValue;
-            } else if (actionName === "change-path") {
+            }
+            else if (actionName === "change-path") {
                 path = actionValue;
-            } else if (actionName === "subtract-points") {
+            }
+            else if (actionName === "subtract-points") {
                 points -= parseInt(actionValue, 10);
-            } else if (actionName === "create-var") {
+            }
+            else if (actionName === "create-var") {
                 quizvars[actionValue.name] = actionValue.value;
-            } else {
+            }
+            else {
                 //console.log("Unknown Action: '" + actionName + "' with a value of '" + actionValue + "'.")
             }
         }
-        
+
     }
+
     function addAnswer(num, ansNum, path) {
         //console.log(num);
         //console.log(ansNum);
@@ -96,7 +103,7 @@
             //console.log(num);
             question = questions.paths[String(path)][num].question;
         }
-        
+
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
             //console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
             //console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
@@ -127,7 +134,7 @@
 
 
     var buttonclick = function() {
-        
+
         var choice = $(this).find('input:radio').val();
         // console.log(choice);
         // console.log(qNumber);
@@ -141,7 +148,7 @@
             $("#qid").html(String(qNumber));
             num = String(qNumber);
         }
-        
+
         if (num === "base") {
             if (questions.base.answers[choice].action) {
                 runActions(questions.base.answers[String(choice)].action);
@@ -149,7 +156,7 @@
         }
         else if (num === "-1") {
             // do nothing
-            
+
         }
         else {
             //console.log(questions.base.answers[String(choice)].action);
@@ -164,9 +171,11 @@
         //console.log(points);
         qNumber = qNumber + 1;
         //console.log(qNumber);
-        if (questions.paths[String(path)][qNumber].question === "end-quiz") {
-            endQuiz();
-            return false; // exit function is question is end-quiz. This will end the quiz but will not add answers or run actions
+        if (!!questions.paths[String(path)][qNumber].question) { // force boolean so it wont throw error
+            if (questions.paths[String(path)][qNumber].question === "end-quiz") {
+                endQuiz();
+                return false; // exit function is question is end-quiz. This will end the quiz but will not add answers or run actions
+            }
         }
         changeQuestion(qNumber, path);
     };
