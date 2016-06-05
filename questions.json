@@ -173,23 +173,21 @@
 					},
 					
 					"3": {
-						"answer": "Just a few really good friends."
+						"answer": "Just a few close friends."
 					},
 					"4": {
 						"action": [{
-							"add-points":"2"
+							"add-points":"1"
 						}, {
-							"add-advice": "You should study a little less(3-7 hours). Remeber that failing one test wont kill your grade unless it is a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
+							"add-advice": "If you have a lot of friends, you should try to get a few closer to you. Find some people who share your intrests, and talk to them more."
 						}],
-						"answer": "8-11 Hours"
+						"answer": "a ton, but none are really close."
 					},
 					"5": {
 						"action": [{
-							"add-points": "5"
-						}, {
-							"add advice":"Slow Down! You study way too much. You should be studying for about 3-7 hours"
+							"subtract-points": "4"
 						}],
-						"answer": "11+ Hours"
+						"answer": "A lot, and some are close"
 					}
 					"entries": "5"
 				}
