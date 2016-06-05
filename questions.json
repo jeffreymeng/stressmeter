@@ -83,43 +83,57 @@
 						"answer": "Right after school."
 					},
 					"2": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-advice": "It is good that you take a short break"
 						}],
 						"answer": "After a short 30 min break."
 					},
 					"3": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-points": ""
 						}],
 						"answer": "After a afterschool class"
 					},
 					"4": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"subtract-points": "2"
 						}],
 						"answer": "After Sports"
 					},
 					"5": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-points": ""
 						}],
 						"answer": "Popularity"
 					},
 					"6": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-points": ""
 						}],
 						"answer": "Parents"
 					},
 					"7": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-points": ""
 						}],
 						"answer": "Siblings"
 					},
 					"8": {
-						"action": [{
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						},{
 							"add-points": ""
 						}],
 						"answer": "Other"
