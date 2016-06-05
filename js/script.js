@@ -145,7 +145,7 @@
             if (questions.paths[String(path)][num].answers[choice].action) {
                 console.log("(questions.paths[" + String(path) + "][" + num + "].answers[" + choice + "].action");
                 console.log(true);
-                runActions(questions.base.answers[choice].action);
+                runActions(questions.paths[String(path)][num].answers[choice].action);
             }
         }
         console.log(path);
