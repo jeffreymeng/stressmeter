@@ -211,6 +211,7 @@
             console.log(questions.base.answers[choice].action);
             console.log(questions.paths[String(path)][num].answers[choice].action);
             if (questions.paths[String(path)][num].answers[choice].action) {
+                console.log("(questions.paths[" + String(path) + "][" + num + "].answers[" + choice + "].action");
                 console.log(true);
                 runActions(questions.base.answers[choice].action);
             }
