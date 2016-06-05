@@ -4,32 +4,40 @@
 		"answers": {
 			"1": {
 				"action": [{
-					"add-advice":"HELLO I AM SO HAPPY YAY!!!!!!!!!!!!!!!!!!"
-				},
-				{
+					"add-advice": "HELLO I AM SO HAPPY YAY!!!!!!!!!!!!!!!!!!"
+				}, {
 					"change-path": "1"
-				
-				},
-				{"create-var":{"name":"work-type","value":"working on your school assignments or project"}
-					
+
+				}, {
+					"create-var": {
+						"name": "work-type",
+						"value": "working on your school assignments or project"
+					}
+
 				}],
 				"answer": "School Assignments or Projects"
 			},
 			"2": {
 				"action": [{
 					"change-path": "1"
-					
-				},{
-					"create-var":{"name":"work-type","value":"doing your homework"}
+
+				}, {
+					"create-var": {
+						"name": "work-type",
+						"value": "doing your homework"
+					}
 				}],
 				"answer": "Homework"
 			},
 			"3": {
 				"action": [{
 					"change-path": "1"
-					
-				},{
-					"create-var":{"name":"work-type","value":"studying for your test"}
+
+				}, {
+					"create-var": {
+						"name": "work-type",
+						"value": "studying for your test"
+					}
 				}],
 				"answer": "Tests"
 			},
@@ -73,9 +81,10 @@
 				"question": "When are you {{work-type}}?",
 				"answers": {
 					"1": {
-						"action": [
-							{"add-points": "2"},
-							{"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						"action": [ {
+							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+						}, {
+							"add-points": "2"
 						}],
 						"answer": "Right after school."
 					},
@@ -128,9 +137,10 @@
 				"question": "How many hours do you do homework, pojects, and study for tests combined every week.?",
 				"answers": {
 					"1": {
-						"action": [
-							{"end-quiz": "true"},
-							{"add-advice": "You should study a little at least."
+						"action": [{
+							"end-quiz": "true"
+						}, {
+							"add-advice": "You should study a little at least."
 						}],
 						"answer": "0-3 Hours."
 					},
