@@ -197,9 +197,7 @@
 					"entries": "8"
 				}
 			},
-			{
-				"end-quiz":"end-quiz"
-			}
+			"end-quiz"
 		}
 
 	}
