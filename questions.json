@@ -169,36 +169,37 @@
 				"question": "How many hours a week do you do sports, games, and other recreational activities?",
 				"answers": {
 					"1": {
+						"answer": "0-1 Hours",
 						"action": [{
 							"subtract-points": "1"
-						}],
-						"answer": "0-1 Hours"
+						}]
+						
 					},
 					"2": {
 						"action": [{
-							"add-advice": "Even though you are really close to your friend, you should try to find other friends too. What will you do when your friend gets sick?"
+							"subtract-points": "3"
 						}],
-						"answer": "Just one good friend. We do eveything together"
+						"answer": "2-4 Hours"
 					},
-
 					"3": {
-						"answer": "Just a few close friends."
+						"action": [{
+							"subtract-points": "5"
+						}],
+						"answer": "4-6 Hours"
 					},
 					"4": {
 						"action": [{
-							"add-points": "1"
-						}, {
-							"add-advice": "If you have a lot of friends, you should try to get a few closer to you. Find some people who share your intrests, and talk to them more."
+							"subtract-points": "7"
 						}],
-						"answer": "a ton, but none are really close."
+						"answer": "6-8 Hours"
 					},
 					"5": {
 						"action": [{
-							"subtract-points": "4"
+							"subtract-points": "9"
 						}],
-						"answer": "A lot, and some are close"
+						"answer": "8 + Hours"
 					},
-					"entries": "5"
+					"entries":"5"
 				}
 			}
 		}

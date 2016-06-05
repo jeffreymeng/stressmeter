@@ -175,7 +175,7 @@
         //console.log(points);
         qNumber = qNumber + 1;
         //console.log(qNumber);
-        if (qNumber === 6) {
+        if (qNumber === 5) {
             endQuiz();
         }
         changeQuestion(qNumber, path);
