@@ -52,7 +52,7 @@
         console.log(ansNum);
         var text;
         if (num === "base") {
-            text = questions[num].answers[ansNum].answer;
+            text = questions.base.answers[ansNum].answer;
         }
         else {
             text = questions.paths[String(path)][num].answers[ansNum].answer;
