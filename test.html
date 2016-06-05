@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    
+</head>
 <body>
 
 
@@ -16,11 +18,10 @@
             ctx.beginPath();
             ctx.rect(20, 20, 150, 100);
             ctx.fillStyle = color;
-
             ctx.fill();
         }
 
-        function swichColor() {
+        function switchColor() {
             if (currentColor === "red") {
                 // current color is red
                 currentColor = "blue";
@@ -32,11 +33,10 @@
                 draw("red");
             }
         }
-        window.onload = function(){
+        window.onload = function() {
             draw("red");
-        }
-        var button = document.getElementById("changeColor");
-        button.click(swichColor);
+        };
+        document.getElementById("changeColor").click(switchColor);
     </script>
 </body>
 
