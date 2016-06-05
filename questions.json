@@ -78,67 +78,38 @@
 						"action": [ {
 							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
 						}, {
-							"add-points": "2"
+							"add-points": "3"
 						}],
 						"answer": "Right after school."
 					},
 					"2": {
 						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+							"subtract-points": "3"
 						},{
-							"add-advice": "It is good that you take a short break"
+							"add-advice": "It is good that you take a short break after school. Just make sure it's not too long."
 						}],
 						"answer": "After a short 30 min break."
 					},
 					"3": {
 						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+							"add-advice": "You should make sure to take a 30 minute break as soon as you get home from your class."
 						},{
-							"add-points": ""
+							"add-points": "5"
 						}],
-						"answer": "After a afterschool class"
+						"answer": "After a afterschool class that you dont like."
 					},
 					"4": {
 						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
+							"add-advice": "Doing sports is a great way to relax."
 						},{
 							"subtract-points": "2"
 						}],
 						"answer": "After Sports"
 					},
 					"5": {
-						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
-						},{
-							"add-points": ""
-						}],
-						"answer": "Popularity"
-					},
-					"6": {
-						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
-						},{
-							"add-points": ""
-						}],
-						"answer": "Parents"
-					},
-					"7": {
-						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
-						},{
-							"add-points": ""
-						}],
-						"answer": "Siblings"
-					},
-					"8": {
-						"action": [ {
-							"add-advice": "It is good that you are working on your homework right after school every day, but you should try to at least have a small snack break or read for 5-30 minutes to cool down before homework"
-						},{
-							"add-points": ""
-						}],
 						"answer": "Other"
 					},
-					"entries": "8"
+					"entries": "5"
 				}
 			},
 			"2": {
@@ -146,58 +117,84 @@
 				"answers": {
 					"1": {
 						"action": [{
-							"end-quiz": "true"
-						}, {
 							"add-advice": "You should study a little at least."
 						}],
 						"answer": "0-3 Hours."
 					},
 					"2": {
-						"action": [{
-							"add-advice": "Keep studying for 3-7 hours a week, unless you have a big test comng up, in which it is acceptable to study for up to 11 hours a week, buy a max of 3 hours a day."
+						"action": [
+						{
+							"add-advice": "Keep studying for 3-7 hours a week, unless you have a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
 						}],
-						"answer": "3-5"
+						"answer": "3-5 Hours"
 					},
 					"3": {
 						"action": [{
-							"add-points": ""
+							"add-advice": "Keep studying for 3-7 hours a week, unless you have a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
 						}],
-						"answer": "Afterr a afterschool class"
+						"answer": "5-7 Hours"
 					},
 					"4": {
 						"action": [{
-							"subtract-points": "2"
+							"add-points":"2"
+						}, {
+							"add-advice": "You should study a little less(3-7 hours). Remeber that failing one test wont kill your grade unless it is a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
 						}],
-						"answer": "After Sports"
+						"answer": "8-11 Hours"
 					},
 					"5": {
 						"action": [{
-							"add-points": ""
+							"add-points": "5"
+						}, {
+							"add advice":"Slow Down! You study way too much. You should be studying for about 3-7 hours"
 						}],
-						"answer": "Popularity"
-					},
-					"6": {
-						"action": [{
-							"add-points": ""
-						}],
-						"answer": "Parents"
-					},
-					"7": {
-						"action": [{
-							"add-points": ""
-						}],
-						"answer": "Siblings"
-					},
-					"8": {
-						"action": [{
-							"add-points": ""
-						}],
-						"answer": "Other"
-					},
-					"entries": "8"
+						"answer": "11+ Hours"
+					}
+					"entries": "5"
 				}
 			},
-			"3":{
+			"3": {
+				"question": "How many friends do you have who would call you their friend too?",
+				"answers": {
+					"1": {
+						"action": [
+						{
+							"add-points": "5"
+						}, {
+							"add-advice":"You should just fine someone who has the same intrests as you, and talk to them. Whats the worst that can happen? And No, the world won't explode. Then think of the best that can happen. You could have a person you can do your intrests with."
+						}],
+						"answer": "None."
+					},
+					"2": {
+						"action": [{
+							"add-advice": "Even though you are really close to your friend, you should try to find other friends too. What will you do when your friend gets sick?"
+						}],
+						"answer": "Just one good friend. We do eveything together"
+					},
+					
+					"3": {
+						"answer": "Just a few really good friends."
+					},
+					"4": {
+						"action": [{
+							"add-points":"2"
+						}, {
+							"add-advice": "You should study a little less(3-7 hours). Remeber that failing one test wont kill your grade unless it is a big test comng up(Like one that will greatly affect your grade such as: midterms, finals, or the SAT's), in which it is acceptable to study for up to 11 hours a week, but a max of 3 hours a day."
+						}],
+						"answer": "8-11 Hours"
+					},
+					"5": {
+						"action": [{
+							"add-points": "5"
+						}, {
+							"add advice":"Slow Down! You study way too much. You should be studying for about 3-7 hours"
+						}],
+						"answer": "11+ Hours"
+					}
+					"entries": "5"
+				}
+			},
+			"4":{
 				"question":"end-quiz"
 			}
 		}

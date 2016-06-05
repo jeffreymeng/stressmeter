@@ -48,7 +48,7 @@
                 points += parseInt(actionValue, 10);
             }
             else if (actionName === "add-advice") {
-                advice = advice + "\n" + actionValue;
+                advice = advice + "<li>" + actionValue + "</li>";
             }
             else if (actionName === "change-path") {
                 path = actionValue;
