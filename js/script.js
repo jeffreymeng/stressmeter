@@ -118,9 +118,9 @@
 
     var buttonclick = function() {
         var choice = $(this).find('input:radio').val();
-        console.log(choice);
-        console.log(qNumber);
-        console.log(path);
+        // console.log(choice);
+        // console.log(qNumber);
+        // console.log(path);
         var num;
         if (qNumber === 0) {
             $("#qid").removeClass("hidden");
