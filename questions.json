@@ -88,7 +88,7 @@
 				}
 			},
 			"2": {
-				"question": "How many hours do you do homework, pojects, and study for tests combined every week.?",
+				"question": "How many hours do you do homework, pojects, and study for tests combined every week?",
 				"answers": {
 					"1": {
 						"action": [{
@@ -201,9 +201,6 @@
 						"answer":"8 + Hours"
 					}
 				}
-			},
-			"5":{
-				"question":"end-quiz"
 			}
 		}
 
