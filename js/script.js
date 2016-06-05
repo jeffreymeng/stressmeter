@@ -30,7 +30,20 @@
             actionName = Object.keys(action)[0]
             actionValue = action[actionName];
             console.log(actionName);
-            console.log(actionValue)
+            console.log(actionValue);
+            if (actionName === "add-points") {
+                points += parseInt(actionValue, 10);
+            } else if (actionName === "add-advice") {
+                advice = advice + "\n" + actionValue;
+            } else if (actionName === "change-path") {
+                path = actionValue;
+            } else if (actionName === "subtract-points") {
+                points -= parseInt(actionValue, 10)
+            } else if (actionName === "create-var") {
+                quizvars[actionValue.name] = actionValue.value;
+            } else {
+                console.log("Unknown Action: '" + actionName + "' with a value of '" + actionValue + "'.")
+            }
         }
         
     }
