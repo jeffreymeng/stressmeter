@@ -1,5 +1,4 @@
     /* global $ */
-    "use strict";
     var questions = (function() {
         var json = null;
         $.ajax({
@@ -14,107 +13,27 @@
         return json;
     })();
 
-    var points = 0;
-    var path = 0;
-    var advice = "";
-    var quizvars = {};
+    var points = 0,
+    path = 0,
+    advice = "",
+    quizvars = {};
 
-    function getMainAdviceFromPoints(points, path) {
-        // calculate percentage
-        var tottal; // tottal points
-        switch (path) {
-            case 1:
-                tottal = 20; //TODO: update tottals based on path
-                break;
-            case 2:
-                tottal = 20; //TODO: update tottals based on path
-                break;
-            case 3:
-                tottal = 20; //TODO: update tottals based on path
-                break;
-            case 4:
-                tottal = 20; //TODO: update tottals based on path
-                break;
-        }
-        console.log(tottal);
-        console.log(points);
-        var percentage = points / tottal;
-        if (percentage > 10) {
-
-            // extremly low risk
-        }
-        else if (percentage >= 10 && percentage < 20) {
-            // very low risk
-        }
-        else if (percentage >= 20 && percentage < 30) {
-            // low risk
-        }
-        else if (percentage >= 30 && percentage < 40) {
-            // relatively low risk
-        }
-        else if (percentage >= 40 && percentage < 50) {
-            // slightly low  risk
-        }
-        else if (percentage >= 50 && percentage < 60) {
-            // medium risk
-        }
-        else if (percentage >= 60 && percentage < 70) {
-            // slightly high risk
-        }
-        else if (percentage >= 70 && percentage < 80) {
-            // high risk
-        }
-        else if (percentage >= 90) {
-            // very high risk
-        }
-
-    }
-
-    function endQuiz() {
-        // end the quiz
-        $("#question").html("Thank you for taking this quiz. We hope this helps your stress.");
-        $("#quiz").remove();
-        $("#advice").html(advice);
-        $("#main").html(getMainAdviceFromPoints(points, path));
-        $("#main-text").html(getMainAdviceFromPoints(points, path));
-        $("#results").removeClass("hidden");
-    }
-
-    function runActions(actionList) {
-        console.log(actionList.length);
-        for (var i = 0; i < actionList.length; i++) {
-            var currentAction = actionList[i]; // returns something like {"add points":"7"}
-            console.log(currentAction);
-            console.log(Object.keys(currentAction)[0]);
-            if (Object.keys(currentAction)[0] === "change-path") {
-                path = currentAction[Object.keys(currentAction)[0]];
-            }
-            else if (Object.keys(currentAction)[0] === "add-points") {
-                points += currentAction[Object.keys(currentAction)[0]];
-            }
-            else if (Object.keys(currentAction)[0] === "subtract-points") {
-                points -= currentAction[Object.keys(currentAction)[0]];
-            }
-            else if (Object.keys(currentAction)[0] === "add-advice") {
-                console.log(currentAction[Object.keys(currentAction)[0]]);
-                console.log(advice);
-                advice = advice + currentAction[Object.keys(currentAction)[0]] + "\n";
-                console.log(advice);
-            }
-            else if (Object.keys(currentAction)[0] === "end-quiz") {
-                endQuiz();
-            }
-            else if (Object.keys(currentAction)[0] === "create-var") {
-                console.log(currentAction["create-var"].name);
-                console.log(currentAction["create-var"].value);
-                quizvars[currentAction["create-var"].name] = currentAction["create-var"].value;
-            }
-            else {
-                console.log("unknown action: " + Object.keys(currentAction)[0]);
-            }
-        }
-    }
     console.log(questions);
+    function runActions(actionList) {
+        var length = actionList.length;
+        console.log(actionList)
+        var actionName;
+        var actionValue;
+        for (var i = 0; i < length; i ++) {
+            var action = actionList[i];
+            console.log(action)
+            actionName = Object.keys(action)[0]
+            actionValue = action.name;
+            console.log(actionName);
+            console.log(actionValue)
+        }
+        
+    }
     function addAnswer(num, ansNum, path) {
         console.log(num);
         console.log(ansNum);
@@ -200,7 +119,7 @@
         }
         if (num === "base") {
             if (questions.base.answers[choice].action) {
-                runActions(questions.base.answers[choice].action);
+                runActions(questions.base.answers[String(choice)].action);
             }
         }
         else if (num === "-1") {
@@ -208,7 +127,7 @@
             
         }
         else {
-            console.log(questions.base.answers[choice].action);
+            console.log(questions.base.answers[String(choice)].action);
             console.log(questions.paths[String(path)][num].answers[choice].action);
             if (questions.paths[String(path)][num].answers[choice].action) {
                 console.log("(questions.paths[" + String(path) + "][" + num + "].answers[" + choice + "].action");
