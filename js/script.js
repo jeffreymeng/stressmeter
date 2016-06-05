@@ -96,9 +96,7 @@
             //console.log(num);
             question = questions.paths[String(path)][num].question;
         }
-        if (question === "end-quiz") {
-            endQuiz();
-        }
+        
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
             //console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
             //console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
@@ -129,6 +127,7 @@
 
 
     var buttonclick = function() {
+        
         var choice = $(this).find('input:radio').val();
         // console.log(choice);
         // console.log(qNumber);
@@ -142,6 +141,7 @@
             $("#qid").html(String(qNumber));
             num = String(qNumber);
         }
+        
         if (num === "base") {
             if (questions.base.answers[choice].action) {
                 runActions(questions.base.answers[String(choice)].action);
@@ -164,6 +164,10 @@
         //console.log(points);
         qNumber = qNumber + 1;
         //console.log(qNumber);
+        if (questions.paths[String(path)][qNumber].question === "end-quiz") {
+            endQuiz();
+            return false; // exit function is question is end-quiz. This will end the quiz but will not add answers or run actions
+        }
         changeQuestion(qNumber, path);
     };
     $("label.btn").click(buttonclick);
