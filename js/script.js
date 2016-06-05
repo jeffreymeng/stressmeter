@@ -1,3 +1,4 @@
+(function(){
     /* global $ */
     var questions = (function() {
         var json = null;
@@ -18,19 +19,30 @@
     advice = "",
     quizvars = {};
 
-    console.log(questions);
+    // console.log(questions);
+    function endQuiz() {
+        var maintext;
+        var mainadvice;
+        
+        $("#qid").hide();
+        $("#questions").val("Thank you for taking this quiz. We hope this helps your stress.");
+        $("#quiz").hide();
+        $("#main").html(maintext);
+        $("#main-text-advice").html(mainadvice);
+        $("#advice").html(advice);
+    }
     function runActions(actionList) {
         var length = actionList.length;
-        console.log(actionList)
+        // console.log(actionList)
         var actionName;
         var actionValue;
         for (var i = 0; i < length; i ++) {
             var action = actionList[i];
-            console.log(action)
-            actionName = Object.keys(action)[0]
+            // console.log(action)
+            actionName = Object.keys(action)[0];
             actionValue = action[actionName];
-            console.log(actionName);
-            console.log(actionValue);
+            //console.log(actionName);
+            //console.log(actionValue);
             if (actionName === "add-points") {
                 points += parseInt(actionValue, 10);
             } else if (actionName === "add-advice") {
@@ -38,18 +50,18 @@
             } else if (actionName === "change-path") {
                 path = actionValue;
             } else if (actionName === "subtract-points") {
-                points -= parseInt(actionValue, 10)
+                points -= parseInt(actionValue, 10);
             } else if (actionName === "create-var") {
                 quizvars[actionValue.name] = actionValue.value;
             } else {
-                console.log("Unknown Action: '" + actionName + "' with a value of '" + actionValue + "'.")
+                //console.log("Unknown Action: '" + actionName + "' with a value of '" + actionValue + "'.")
             }
         }
         
     }
     function addAnswer(num, ansNum, path) {
-        console.log(num);
-        console.log(ansNum);
+        //console.log(num);
+        //console.log(ansNum);
         var text;
         if (num === "base") {
             text = questions.base.answers[ansNum].answer;
@@ -81,15 +93,15 @@
             question = questions[num].question;
         }
         else {
-            console.log(num);
+            //console.log(num);
             question = questions.paths[String(path)][num].question;
         }
         if (question === "end-quiz") {
             endQuiz();
         }
         if (question.indexOf("{{") > -1 && question.indexOf("}}") > -1) {
-            console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
-            console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
+            //console.log(question.substring(question.indexOf("{{") + 2, question.indexOf("}}")));
+            //console.log(quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))]);
             question = question.substring(0, question.indexOf("{{")) + // before variable
                 quizvars[question.substring(question.indexOf("{{") + 2, question.indexOf("}}"))] + // variable name
                 question.substring(question.indexOf("}}") + 2); // after variable
@@ -140,19 +152,19 @@
             
         }
         else {
-            console.log(questions.base.answers[String(choice)].action);
-            console.log(questions.paths[String(path)][num].answers[choice].action);
+            //console.log(questions.base.answers[String(choice)].action);
+            //console.log(questions.paths[String(path)][num].answers[choice].action);
             if (questions.paths[String(path)][num].answers[choice].action) {
-                console.log("(questions.paths[" + String(path) + "][" + num + "].answers[" + choice + "].action");
-                console.log(true);
+                //console.log("(questions.paths[" + String(path) + "][" + num + "].answers[" + choice + "].action");
+                //console.log(true);
                 runActions(questions.paths[String(path)][num].answers[choice].action);
             }
         }
-        console.log(path);
-        console.log(points);
+        //console.log(path);
+        //console.log(points);
         qNumber = qNumber + 1;
-        console.log(qNumber);
+        //console.log(qNumber);
         changeQuestion(qNumber, path);
     };
     $("label.btn").click(buttonclick);
-    
+})();
