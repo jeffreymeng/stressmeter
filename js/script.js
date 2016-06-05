@@ -171,7 +171,7 @@
         //console.log(points);
         qNumber = qNumber + 1;
         //console.log(qNumber);
-        if (!!questions.paths[String(path)][qNumber].question) { // force boolean so it wont throw error
+        if (num > 1) {
             if (questions.paths[String(path)][qNumber].question === "end-quiz") {
                 endQuiz();
                 return false; // exit function is question is end-quiz. This will end the quiz but will not add answers or run actions
