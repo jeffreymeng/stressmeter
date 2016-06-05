@@ -1,4 +1,4 @@
-(function() {
+//(function() {
     /* global $ */
     var questions = (function() {
         var json = null;
@@ -175,13 +175,10 @@
         //console.log(points);
         qNumber = qNumber + 1;
         //console.log(qNumber);
-        if (num > 1) {
-            if (questions.paths[String(path)][qNumber].question === "end-quiz") {
-                endQuiz();
-                return false; // exit function is question is end-quiz. This will end the quiz but will not add answers or run actions
-            }
+        if (qNumber === 6) {
+            endQuiz();
         }
         changeQuestion(qNumber, path);
     };
     $("label.btn").click(buttonclick);
-})();
+//})();
