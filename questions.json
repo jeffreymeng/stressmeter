@@ -5,6 +5,8 @@
 			"1": {
 				"action": [{
 					"add-advice": "HELLO I AM SO HAPPY YAY!!!!!!!!!!!!!!!!!!"
+				},{
+					"add-points": "20"
 				}, {
 					"change-path": "1"
 
