@@ -33,7 +33,7 @@
         $("#main").html(maintext);
         $("#main-text-advice").html(mainadvice);
         $("#advice").html(advice);
-        $("#results").removeClass("hidden");
+        $("#result").removeClass("hidden");
     }
 
     function runActions(actionList) {
