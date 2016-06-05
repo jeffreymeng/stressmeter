@@ -28,7 +28,7 @@
             var action = actionList[i];
             console.log(action)
             actionName = Object.keys(action)[0]
-            actionValue = action.name;
+            actionValue = action[actionName];
             console.log(actionName);
             console.log(actionValue)
         }
