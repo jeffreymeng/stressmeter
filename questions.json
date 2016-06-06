@@ -205,11 +205,17 @@
 					},
 					"5": {
 						"action": [{
-							"subtract-points": "9"
+							"subtract-points": "8"
 						}],
 						"answer": "8 + Hours"
 					},
-					"entries":"5"
+					"6": {
+						"action": [{
+							"subtract-points": "9"
+						}],
+						"answer": "11 + Hours"
+					},
+					"entries":"6"
 				}
 			}
 		}
