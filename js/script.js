@@ -32,13 +32,13 @@
         } else if (points > 0 && points < 3) {
             maintext = "You are a little stressed";
             mainadvice = "You should do some more recreational activities";
-        } else if (points > 3 && points < 7) {
+        } else if (points >= 3 && points < 7) {
             maintext = "You mildly stressed";
             mainadvice = "You should do some more recreational activities, or do less homework.";
-        } else if (points > 7 && points < 11) {
+        } else if (points >= 7 && points < 11) {
             maintext = "You are quite stressed";
             mainadvice = "You should make sure to do some more recreational activities, or do less homework.";
-        } else if (points < 11) {
+        } else if (points >= 11) {
             maintext = "You are very stressed";
             mainadvice = "Go see a psychiatrist.";
         }
