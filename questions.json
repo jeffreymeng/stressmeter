@@ -88,9 +88,13 @@
 						"answer": "After Sports"
 					},
 					"6": {
+						
+						"answer": "During School"
+					},
+					"7": {
 						"answer": "Other"
 					},
-					"entries": "6"
+					"entries": "7"
 				}
 			},
 			"2": {
