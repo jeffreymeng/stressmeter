@@ -23,12 +23,28 @@
     function endQuiz() {
         var maintext;
         var mainadvice;
-        if (points < 20) {
+        if (points < 0) {
             maintext = "You are not stressed";
             mainadvice = "";
+        } else if (points === 0) {
+            maintext = "You are not too stressed";
+            mainadvice = "You might want to do some more recreational activitys";
+        } else if (points > 0 && points < 3) {
+            maintext = "You are a little stressed";
+            mainadvice = "You should do some more recreational activitys";
+        } else if (points > 3 && points < 7) {
+            maintext = "You midly stressed";
+            mainadvice = "You should do some more recreational activitys, or do less homework.";
+        } else if (points > 7 && points < 11) {
+            maintext = "You are quite stressed";
+            mainadvice = "You should make sure to do some more recreational activitys, or do less homework.";
+        } else if (points < 11) {
+            maintext = "You are very stressed";
+            mainadvice = "Go see a psychiatrist.";
         }
         $("#qid").hide();
-        $("#questions").val("Thank you for taking this quiz. We hope this helps your stress.");
+        $("#question").css("color", "black");
+        $("#question").val("Thank you for taking this quiz. We hope this helps your stress.");
         $("#quiz").hide();
         $("#main").html(maintext);
         $("#main-text-advice").html(mainadvice);
@@ -138,7 +154,9 @@
 
 
     var buttonclick = function() {
-
+        if (qNumber === -1) {
+            $("#question").css("color", "blue");
+        }
         var choice = $(this).find('input:radio').val();
         // console.log(choice);
         // console.log(qNumber);
