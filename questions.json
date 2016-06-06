@@ -91,6 +91,12 @@
 						
 						"answer": "During School"
 					},
+					"5": {
+						"action": [{
+							"add-points": "3"
+						}],
+						"answer": "Never"
+					},
 					"7": {
 						"answer": "Other"
 					},
